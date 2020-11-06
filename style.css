@@ -1,0 +1,127 @@
+
+html {
+  box-sizing: border-box;
+}
+/*
+echo "# calculator" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Abdellah-ST/calculator.git
+git push -u origin main
+                 */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0052D4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator{
+  background: #e5f0e5;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow:0 5px 30px -5px rgba(0,0,0,0.6) ;
+}
+
+.calculator-display{
+  background: black;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0 0;
+}
+
+/* display */
+.calculator-display h1{
+  margin: 0;
+  padding: 25px;
+  font-size: 45px;
+  font-family: 'Lucida Console',sans-serif;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+/* custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* buttons */
+.calculator-buttons{
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 10px;
+}
+
+button{
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: lightgrey;
+}
+button:hover{
+  filter:brightness(110%);
+}
+button:active{
+  transform: translateY(1px);
+}
+button:focus{
+  outline: none;
+}
+
+.operator{
+  background: grey;
+  color: whitesmoke;
+  font-size: 30px;
+}
+.clear{
+  background-color: crimson;
+  color: whitesmoke;
+}
+.clear:hover{
+  filter: brightness(90%);
+}
+
+
+.equal-sign{
+  background: limegreen;
+  grid-column: -2;
+  grid-row: 2 / span 4;
+}
+
+
+
+
+@media screen and (max-width:600px) {
+  .calculator{
+    width: 95%;
+  }
+}
